@@ -13,21 +13,20 @@ const AboutMe = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col md:flex-row">
       {/* Desktop Sidebar */}
-      <div className="hidden md:flex flex-col justify-between items-center bg-black text-white w-16 py-6">
-        <div className="space-y-6">
+      <div className="hidden md:flex flex-col items-center justify-center bg-black text-white w-16 py-8 space-y-8">
          <Link to="/">
-          <Home className="w-6 h-6" />
+          <Home className="w-6 h-6 hover:scale-125" />
          </Link>      
          <Link to="/about">
-          <button><User className="w-6 h-6" /></button>
+          <button><User className="w-6 h-6 hover:scale-125" /></button>
          </Link>
           <Layers className="w-6 h-6" />
         <Link to="/qualification">
-          <button><GraduationCap className="w-6 h-6" /></button>
+          <button><GraduationCap className="w-6 h-6 hover:scale-125" /></button>
         </Link>
           <Mail className="w-6 h-6" />
-        </div>
-        <Share2 className="w-6 h-6" />
+    
+        <Share2 className="absolute bottom-6" />
       </div>
 
       {/* Main Content */}
@@ -51,19 +50,18 @@ const AboutMe = () => {
       </div>
 
       {/* Mobile Bottom Sidebar */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 bg-black text-white flex justify-around items-center py-3 md:hidden">
+      <div className="fixed bottom-1 left-17 right-0 w-11/12 max-w-md bg-black rounded-full py-4 text-white flex justify-around items-center py-3 md:hidden z-50 shadow-lg">
        <Link to="/">
-          <Home className="w-6 h-6" />
+          <Home className="w-6 h-6 hover:scale-125" />
          </Link> 
         <Link to="/about">
-         <button><User className="w-6 h-6" /></button>
+         <button><User className="w-6 h-6 hover:scale-125" /></button>
         </Link>
         <Layers className="w-5 h-5" />
         <Link to="/qualification">
-          <button><GraduationCap className="w-6 h-6" /></button>
+          <button><GraduationCap className="w-6 h-6 hover:scale-125" /></button>
         </Link>
         <Mail className="w-5 h-5" />
-        <Share2 className="w-5 h-5" />
       </div>
     </div>
   );

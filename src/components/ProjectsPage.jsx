@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Home, User, Layers, GraduationCap, Mail, Menu } from "lucide-react";
+import { Home, User, Layers, GraduationCap, Mail, Share2, } from "lucide-react";
 import img1 from "../assets/project1.png";
 import img2 from "../assets/project2.png";
 import img3 from "../assets/project3.png";
@@ -19,24 +19,26 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col justify-between">
+    <div className="min-h-screen bg-gray-100 flex flex-col md:flex-row">
       {/* Desktop Sidebar */}
-      <div className="hidden md:flex flex-col items-center bg-black text-white w-16 py-8 space-y-6">
+      <div className="hidden md:flex flex-col items-center justify-center bg-black text-white w-16 py-8 space-y-8">
         <Link to="/">
-          <Home className="w-6 h-6" />
+          <Home className="w-6 h-6 hover:scale-125" />
         </Link>
         <Link to="/about">
-        <button><User className="w-6 h-6" /></button>
+        <button><User className="w-6 h-6 hover:scale-125" /></button>
         </Link>
         <Layers className="w-6 h-6" />
         <Link to="/qualification">
-         <button><GraduationCap className="w-6 h-6" /></button>
+         <button><GraduationCap className="w-6 h-6 hover:scale-125" /></button>
         </Link>
         <Mail className="w-6 h-6" />
+
+        <Share2 className="absolute bottom-6" />
       </div>
 
       {/* Content */}
-      <div className="flex-1 flex flex-col items-center px-4 pt-6 pb-20">
+      <div className="flex-1 flex flex-col items-center justify-center px-4 pt-6 pb-20">
         <h1 className="text-4xl font-bold mb-8">PROJECTS</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-5xl">
           {projects.map((src, idx) => (
@@ -52,16 +54,16 @@ export default function ProjectsPage() {
       </div>
 
       {/* Bottom Navigation (Mobile Only) */}
-      <div className="fixed bottom-0 left-0 right-0 bg-black text-white flex justify-around items-center py-3 md:hidden z-50">
+      <div className="fixed bottom-1 left-17 right-0 w-11/12 max-w-md bg-black rounded-full py-4 text-white flex justify-around items-center py-3 md:hidden z-50 shadow-lg">
         <Link to="/">
-          <Home className="w-6 h-6" />
+          <Home className="w-6 h-6 hover:scale-125" />
         </Link>
         <Link to="/about">
-          <button><User className="w-6 h-6" /></button>
+          <button><User className="w-6 h-6 hover:scale-125" /></button>
         </Link>
         <button><Layers className="w-6 h-6" /></button>
         <Link to="/qualification">
-          <button><GraduationCap className="w-6 h-6" /></button>
+          <button><GraduationCap className="w-6 h-6 hover:scale-125" /></button>
         </Link>
         <button><Mail className="w-6 h-6" /></button>
       </div>

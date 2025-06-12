@@ -1,18 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Home, User, Layers, GraduationCap, Mail } from "lucide-react";
+import { Home, User, Layers, GraduationCap, Mail, Share2 } from "lucide-react";
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col md:flex-row">
       
       {/* Desktop Sidebar */}
-      <div className="hidden md:flex flex-col items-center bg-black text-white w-16 py-8 space-y-6">
-        <Link to="/"><Home className="w-6 h-6" /></Link>
-        <Link to="/about"><User className="w-6 h-6" /></Link>
+      <div className="hidden md:flex flex-col items-center justify-center bg-black text-white w-16 py-8 space-y-8">
+        <Link to="/"><Home className="w-6 h-6 hover:scale-125" /></Link>
+        <Link to="/about"><User className="w-6 h-6 hover:scale-125" /></Link>
         <Layers className="w-6 h-6" />
-        <Link to="/qualification"><GraduationCap className="w-6 h-6" /></Link>
-        <Link to="/contact"><Mail className="w-6 h-6" /></Link>
+        <Link to="/qualification"><GraduationCap className="w-6 h-6 hover:scale-125" /></Link>
+        <Link to="/contact"><Mail className="w-6 h-6 hover:scale-125" /></Link>
+
+        <Share2 className="absolute bottom-6" />
       </div>
 
       {/* Main Content */}
@@ -53,12 +55,12 @@ export default function ContactPage() {
       </div>
 
       {/* Mobile Bottom Navigation */}
-      <div className="fixed bottom-0 left-0 right-0 bg-black text-white flex justify-around items-center py-3 md:hidden z-50">
-        <Link to="/"><Home className="w-6 h-6" /></Link>
-        <Link to="/about"><User className="w-6 h-6" /></Link>
+      <div className="fixed bottom-1 left-17 right-0 w-11/12 max-w-md bg-black rounded-full py-4 text-white flex justify-around items-center py-3 md:hidden z-50 shadow-lg">
+        <Link to="/"><Home className="w-6 h-6 hover:scale-125" /></Link>
+        <Link to="/about"><User className="w-6 h-6 hover:scale-125" /></Link>
         <Layers className="w-6 h-6" />
-        <Link to="/qualification"><GraduationCap className="w-6 h-6" /></Link>
-        <Link to="/contact"><Mail className="w-6 h-6" /></Link>
+        <Link to="/qualification"><GraduationCap className="w-6 h-6 hover:scale-125" /></Link>
+        <Link to="/contact"><Mail className="w-6 h-6 hover:scale-125" /></Link>
       </div>
     </div>
   );
