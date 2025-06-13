@@ -53,7 +53,7 @@ const ProfileCard = () => {
       </div>
 
       {/* Bottom Navigation (Mobile Only) */}
-      <div className="fixed bottom-1 left-17 right-0 w-11/12 max-w-md bg-black rounded-full py-4 text-white flex justify-around items-center py-3 md:hidden z-50 shadow-lg">
+      <div className="fixed bottom-1 left-1/2 transform -translate-x-1/2 w-11/12 max-w-md bg-black rounded-full py-4 text-white flex justify-around items-center py-3 md:hidden z-50 shadow-lg">
         <button><Home className="w-6 h-6" /></button>
         <Link to="/about">
         <button><User className="w-6 h-6 hover:scale-125" /></button>
